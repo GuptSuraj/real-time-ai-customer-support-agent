@@ -1,0 +1,31 @@
+name: checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env: {POSTGRES_USER: support, POSTGRES_PASSWORD: support, POSTGRES_DB: support_test}
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U support -d support_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: pnpm/action-setup@v4
+        with: {version: 10.28.2}
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - run: uv sync --frozen --python 3.12
+      - run: uv run pytest -q
+        env: {POSTGRES_TEST_URL: "postgresql+psycopg://support:support@localhost:5432/support_test"}
+      - run: pnpm --dir apps/web install --frozen-lockfile
+      - run: pnpm --dir apps/web typecheck
+      - run: pnpm --dir apps/web build
+      - run: pnpm --dir apps/web exec playwright install --with-deps chromium
+      - run: pnpm --dir apps/web test:e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with: {name: browser-results, path: apps/web/test-results}

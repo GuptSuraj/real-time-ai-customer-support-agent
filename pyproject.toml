@@ -1,0 +1,23 @@
+[project]
+name = "realtime-support"
+version = "0.1.0"
+description = "LiveKit and Gemini voice customer support platform"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn[standard]>=0.34,<1", "sqlalchemy>=2.0,<3",
+  "psycopg[binary]>=3.2,<4", "alembic>=1.14,<2", "pydantic-settings>=2.7,<3",
+  "pwdlib[argon2]>=0.2,<1", "httpx>=0.28,<1", "pyjwt>=2.10,<3",
+  "livekit-api>=1.0,<2", "livekit-agents[google]>=1.8.2,<2",
+  "opentelemetry-sdk>=1.30,<2", "opentelemetry-exporter-otlp-proto-http>=1.30,<2",
+  "opentelemetry-instrumentation-fastapi>=0.51b0,<1", "python-dotenv>=1,<2"
+]
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-asyncio>=0.25,<2", "ruff>=0.11,<1"]
+[tool.pytest.ini_options]
+pythonpath = ["services/api", "services/agent"]
+testpaths = ["services/api/tests", "services/agent/tests"]
+asyncio_mode = "auto"
+[tool.ruff]
+line-length = 110
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
