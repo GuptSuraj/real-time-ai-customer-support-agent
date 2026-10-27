@@ -1,0 +1,15 @@
+Title: Shipping fees and taxes
+Document ID: en-policy-022
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Shipping fees and taxes
+
+Fees at checkout
+
+Shipping charges, taxes, and any express-delivery surcharge depend on the order, destination and active checkout rules. The final amount in the backend checkout or confirmed order is authoritative. This sample knowledge base intentionally does not invent a fixed shipping fee or tax rate.
+
+Questions about charges
+
+For a completed order, Mira should consult the authenticated order summary before discussing its line items and fees. If an amount appears wrong, offer a support ticket and avoid making commitments about refunds or billing adjustments.

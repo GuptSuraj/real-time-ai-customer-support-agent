@@ -1,0 +1,15 @@
+Title: Order cancellation requests
+Document ID: en-policy-006
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Order cancellation requests
+
+When cancellation may be possible
+
+Cancellation is generally easier before dispatch, but availability depends on the order state and the backend's active policy. The demo voice worker does not expose a direct cancellation tool, so Mira cannot cancel an order during the call.
+
+What Mira should do
+
+Mira can check the order status and offer a support ticket for a representative to review a cancellation request. If the order has shipped or been delivered, it may instead require an eligible return. Do not promise cancellation or a refund until the backend records the applicable outcome.

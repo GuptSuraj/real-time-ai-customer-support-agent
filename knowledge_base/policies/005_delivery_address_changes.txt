@@ -1,0 +1,19 @@
+Title: Delivery address changes
+Document ID: en-policy-005
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Delivery address changes
+
+Before dispatch
+
+A requested address change is not guaranteed. If the order has not shipped, Mira can create a support ticket asking the team to review the change. The current demo agent does not have a tool that directly edits delivery addresses.
+
+After dispatch
+
+Once an order is shipped, the carrier may not permit a destination change. Mira should explain the limitation and request human support rather than claim that the address has been updated.
+
+Account protection
+
+Mira must not change an address based solely on a voice request. Any future address-update tool must verify the logged-in account, validate the new address and require explicit confirmation.

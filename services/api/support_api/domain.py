@@ -1,4 +1,5 @@
 import time
+from .business_rules import RETURN_WINDOW_DAYS, ACTION_TTL_SECONDS
 from fastapi import HTTPException
 from sqlalchemy import select
 from .models import (
@@ -68,14 +69,14 @@ def order_detail(db, order):
 def eligibility(db, order):
     if order.status != "delivered" or order.delivered_at is None:
         return {"eligible": False, "reason": "Order has not been delivered"}
-    if time.time() - order.delivered_at > 30 * 86400:
-        return {"eligible": False, "reason": "The 30-day return window has closed"}
+    if time.time() - order.delivered_at > RETURN_WINDOW_DAYS * 86400:
+        return {"eligible": False, "reason": f"The {RETURN_WINDOW_DAYS}-day return window has closed"}
     items = list(db.scalars(select(OrderItem).where(OrderItem.order_id == order.id)))
     if not items or any(not db.get(Product, item.product_id).returnable for item in items):
         return {"eligible": False, "reason": "Order contains a non-returnable item"}
     if db.scalar(select(Return).where(Return.order_id == order.id)):
         return {"eligible": False, "reason": "A return already exists"}
-    return {"eligible": True, "reason": "Eligible within 30 days of delivery"}
+    return {"eligible": True, "reason": f"Eligible within {RETURN_WINDOW_DAYS} days of delivery"}
 
 
 def verified(db, call_id):
@@ -121,7 +122,11 @@ def prepare_action(db, call, kind, payload, request_id):
     ):
         older.status = "superseded"
     action = PendingAction(
-        id=request_id, call_id=call.id, kind=kind, payload=payload, expires_at=time.time() + 300
+        id=request_id,
+        call_id=call.id,
+        kind=kind,
+        payload=payload,
+        expires_at=time.time() + ACTION_TTL_SECONDS,
     )
     db.add(action)
     audit(db, "agent", "action_prepared", call.customer_id, call.id, action_id=action.id, kind=kind)

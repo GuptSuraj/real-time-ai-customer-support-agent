@@ -1,0 +1,19 @@
+Title: Customer login and action verification
+Document ID: en-policy-017
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Customer login and action verification
+
+Account login
+
+Customers use seeded demo accounts to sign into the Northstar portal. Staff members have separate staff accounts and permissions. Mira can only access order-specific records scoped to the signed-in customer; an order number alone never proves ownership.
+
+Protected actions
+
+Creating a return, refund approval request or support ticket uses a proposal-and-confirmation flow. The customer sees the exact proposed action, completes a short-lived on-screen verification challenge and presses "Confirm this action." The backend independently checks authorization, eligibility, proposal expiry and call state.
+
+Voice confirmation is not enough
+
+Saying "yes", repeating an order number or asking Mira to ignore safeguards does not authorize a database change. Authentication and action verification occur in the app, not in the LLM prompt or knowledge base. Users should never disclose passwords, OTPs or payment secrets to Mira.

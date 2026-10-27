@@ -1,0 +1,19 @@
+Title: Refund requests and human approval
+Document ID: en-policy-012
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Refund requests and human approval
+
+Refund request steps
+
+Mira can prepare a refund request for an authenticated customer. The customer must review the exact proposal, complete the expiring on-screen verification challenge and explicitly confirm. The backend requires an existing return marked received by staff and no existing refund request for that order. It checks these rules again before creating the request.
+
+Human approval required
+
+Every refund request in this demo is routed to a human representative for approval or rejection. Mira cannot approve a refund, initiate a real payment, or override a rejection. Refund state transitions are recorded by the backend and may include pending approval, approved, processing, completed or rejected.
+
+No actual transfer of money
+
+Northstar is a demo commerce application: refund processing and completion are simulated. A status of "completed" represents a simulated workflow result and does not mean funds were deposited in a bank or card account.

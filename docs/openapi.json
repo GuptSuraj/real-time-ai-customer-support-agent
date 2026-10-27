@@ -842,8 +842,16 @@
             "in": "query",
             "required": false,
             "schema": {
-              "type": "string",
-              "default": "",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 500
+                },
+                {
+                  "type": "null"
+                }
+              ],
               "title": "Q"
             }
           },
@@ -863,7 +871,9 @@
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "$ref": "#/components/schemas/KnowledgeResponse"
+                }
               }
             }
           },
@@ -2258,6 +2268,243 @@
           "product"
         ],
         "title": "ItemOut"
+      },
+      "KnowledgePolicyOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body"
+          },
+          "created_at": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "body"
+        ],
+        "title": "KnowledgePolicyOut"
+      },
+      "KnowledgeResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "degraded"
+            ],
+            "title": "Status"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "hybrid",
+              "lexical_only",
+              "semantic_only",
+              "legacy",
+              "unavailable"
+            ],
+            "title": "Mode"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "index_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Index Id"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/KnowledgeSourceOut"
+            },
+            "type": "array",
+            "title": "Sources"
+          },
+          "policies": {
+            "items": {
+              "$ref": "#/components/schemas/KnowledgePolicyOut"
+            },
+            "type": "array",
+            "title": "Policies"
+          },
+          "products": {
+            "items": {
+              "$ref": "#/components/schemas/ProductOut"
+            },
+            "type": "array",
+            "title": "Products"
+          },
+          "business_rules": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Business Rules"
+          },
+          "authority": {
+            "type": "string",
+            "title": "Authority"
+          },
+          "latency_ms": {
+            "type": "number",
+            "title": "Latency Ms"
+          },
+          "timings_ms": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Timings Ms"
+          },
+          "no_match": {
+            "type": "boolean",
+            "title": "No Match",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "mode",
+          "sources",
+          "policies",
+          "products",
+          "business_rules",
+          "authority",
+          "latency_ms",
+          "timings_ms"
+        ],
+        "title": "KnowledgeResponse"
+      },
+      "KnowledgeSourceOut": {
+        "properties": {
+          "chunk_id": {
+            "type": "string",
+            "title": "Chunk Id"
+          },
+          "document_id": {
+            "type": "string",
+            "title": "Document Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "source_path": {
+            "type": "string",
+            "title": "Source Path"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "section": {
+            "type": "string",
+            "title": "Section"
+          },
+          "ordinal": {
+            "type": "integer",
+            "title": "Ordinal"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "content_hash": {
+            "type": "string",
+            "title": "Content Hash"
+          },
+          "semantic_similarity": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Semantic Similarity"
+          },
+          "rrf_score": {
+            "type": "number",
+            "title": "Rrf Score"
+          },
+          "semantic_rank": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Semantic Rank"
+          },
+          "lexical_rank": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lexical Rank"
+          }
+        },
+        "type": "object",
+        "required": [
+          "chunk_id",
+          "document_id",
+          "title",
+          "source_path",
+          "category",
+          "version",
+          "section",
+          "ordinal",
+          "text",
+          "content_hash",
+          "semantic_similarity",
+          "rrf_score",
+          "semantic_rank",
+          "lexical_rank"
+        ],
+        "title": "KnowledgeSourceOut"
       },
       "LoginInput": {
         "properties": {

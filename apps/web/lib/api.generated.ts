@@ -941,6 +941,88 @@ export interface components {
             quantity: number;
             product: components["schemas"]["ProductOut"];
         };
+        /** KnowledgePolicyOut */
+        KnowledgePolicyOut: {
+            /** Id */
+            id: string;
+            /** Title */
+            title: string;
+            /** Body */
+            body: string;
+            /** Created At */
+            created_at?: number | null;
+        };
+        /** KnowledgeResponse */
+        KnowledgeResponse: {
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "ready" | "degraded";
+            /**
+             * Mode
+             * @enum {string}
+             */
+            mode: "hybrid" | "lexical_only" | "semantic_only" | "legacy" | "unavailable";
+            /** Reason */
+            reason?: string | null;
+            /** Index Id */
+            index_id?: string | null;
+            /** Sources */
+            sources: components["schemas"]["KnowledgeSourceOut"][];
+            /** Policies */
+            policies: components["schemas"]["KnowledgePolicyOut"][];
+            /** Products */
+            products: components["schemas"]["ProductOut"][];
+            /** Business Rules */
+            business_rules: {
+                [key: string]: unknown;
+            };
+            /** Authority */
+            authority: string;
+            /** Latency Ms */
+            latency_ms: number;
+            /** Timings Ms */
+            timings_ms: {
+                [key: string]: number;
+            };
+            /**
+             * No Match
+             * @default false
+             */
+            no_match: boolean;
+        };
+        /** KnowledgeSourceOut */
+        KnowledgeSourceOut: {
+            /** Chunk Id */
+            chunk_id: string;
+            /** Document Id */
+            document_id: string;
+            /** Title */
+            title: string;
+            /** Source Path */
+            source_path: string;
+            /** Category */
+            category: string;
+            /** Version */
+            version: string;
+            /** Section */
+            section: string;
+            /** Ordinal */
+            ordinal: number;
+            /** Text */
+            text: string;
+            /** Content Hash */
+            content_hash: string;
+            /** Semantic Similarity */
+            semantic_similarity: number | null;
+            /** Rrf Score */
+            rrf_score: number;
+            /** Semantic Rank */
+            semantic_rank: number | null;
+            /** Lexical Rank */
+            lexical_rank: number | null;
+        };
         /** LoginInput */
         LoginInput: {
             /** Email */
@@ -1894,7 +1976,7 @@ export interface operations {
     agent_knowledge_internal_knowledge_get: {
         parameters: {
             query?: {
-                q?: string;
+                q?: string | null;
             };
             header?: {
                 authorization?: string;
@@ -1910,7 +1992,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": unknown;
+                    "application/json": components["schemas"]["KnowledgeResponse"];
                 };
             };
             /** @description Validation Error */

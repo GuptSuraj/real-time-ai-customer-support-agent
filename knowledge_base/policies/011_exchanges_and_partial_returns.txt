@@ -1,0 +1,19 @@
+Title: Exchanges and partial returns
+Document ID: en-policy-011
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Exchanges and partial returns
+
+Current demo limitation
+
+Northstar's current voice support demo does not provide an autonomous exchange workflow or partial-item return tool. Mira can propose eligible whole-order returns only.
+
+How to request an exchange
+
+If a customer wants a different color, size or model, Mira can create a confirmed ticket requesting human review. A representative will determine what is possible. The AI should never claim that replacement stock or a free exchange is guaranteed.
+
+Multiple items in an order
+
+For an order containing several products, explain that the automated return covers the whole eligible order. If the customer only wants to return one product, escalate to a human rather than submitting a whole-order return against the customer's intent.

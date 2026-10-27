@@ -7,6 +7,7 @@ RUN uv sync --frozen --no-dev
 COPY services ./services
 COPY scripts ./scripts
 COPY evaluations ./evaluations
+COPY knowledge_base ./knowledge_base
 ENV PATH="/app/.venv/bin:$PATH" PYTHONPATH="/app/services/api:/app/services/agent"
 EXPOSE 8000
 CMD ["uvicorn", "support_api.main:app", "--host", "0.0.0.0", "--port", "8000"]

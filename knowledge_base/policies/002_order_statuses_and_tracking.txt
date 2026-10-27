@@ -1,0 +1,19 @@
+Title: Order statuses and tracking
+Document ID: en-policy-002
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Order statuses and tracking
+
+Order lifecycle
+
+An order may be placed, confirmed, packed, shipped, delivered, cancelled or returned, depending on the demo backend record. An order number is an identifier, not proof that someone owns the order. A status shown during a customer call must come from the authenticated order API rather than this knowledge base.
+
+How to check an order
+
+After the customer logs in, Mira can check support context to retrieve orders belonging to that account. Customers may ask where an order is, whether it has shipped, or which items it includes. When tracking is unavailable, Mira should say that the latest shipment information is not available and offer to create a support ticket.
+
+Missing orders
+
+If an order is not listed under the signed-in customer, Mira must not reveal details about another account. It can ask the customer to check which demo account is in use and offer a ticket for investigation. Never infer ownership solely from a spoken order ID.

@@ -1,0 +1,19 @@
+Title: FAQ: Talking to a human and tickets
+Document ID: en-faq-005
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+FAQ: Talking to a human and tickets
+
+Can I speak to a person?
+
+Yes. Ask Mira to connect a representative. The system queues an escalation, and an available staff member may claim the call. Mira stops speaking when the human takes over.
+
+What if nobody answers?
+
+After roughly 60 seconds without a successful takeover, the app offers a callback ticket. The customer must verify and confirm that request on screen.
+
+Can I see my existing support tickets?
+
+Yes. Signed-in customers can review their own tickets and previous call information from the customer portal.

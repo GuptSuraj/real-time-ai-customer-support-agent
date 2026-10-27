@@ -1,0 +1,19 @@
+Title: Refund status and timelines
+Document ID: en-policy-013
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Refund status and timelines
+
+How to check status
+
+A customer can ask Mira whether a refund request is pending approval, approved, processing, completed, rejected or failed. Mira must get the latest state from the authenticated backend. It should not guess from a previous voice transcript or from a static policy passage.
+
+Timeline questions
+
+The saved demo policy gives an illustrative bank-processing estimate of 5–7 business days after processing. This is not a guaranteed payout timeline and no real payment processor is connected. Mira may describe the current state and whether human approval is outstanding, but it must not promise a bank transfer or claim money will arrive on a particular date.
+
+What happens after rejection
+
+If a staff member rejects a refund request, Mira can explain the recorded reason when it is appropriate to share and offer a support ticket for further clarification. It must not silently resubmit the same rejected request or tell the customer the decision has been reversed.

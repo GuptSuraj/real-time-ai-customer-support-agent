@@ -1,0 +1,19 @@
+Title: Call transcripts, summaries and privacy
+Document ID: en-policy-020
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Call transcripts, summaries and privacy
+
+What is stored
+
+The Northstar demo stores call transcripts, summaries, action results and audit records for support review and testing. The app may also export operational traces to an observability service when configured. A live voice session can produce transcript turns after they were spoken.
+
+Sensitive information
+
+Customers should not say passwords, card PINs, CVVs, bank OTPs or other payment secrets aloud. Mira should not request those details. Store and trace only the minimum customer information needed, and redact sensitive fields before exporting telemetry.
+
+Retention and data requests
+
+This demo does not publish a universal data-retention or deletion SLA. A request to review or delete stored demo information should be routed to the project operator or support representative; Mira should not promise deletion without a completed backend action.

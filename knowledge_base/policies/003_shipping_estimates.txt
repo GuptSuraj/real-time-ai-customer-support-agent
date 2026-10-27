@@ -1,0 +1,19 @@
+Title: Shipping estimates
+Document ID: en-policy-003
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Shipping estimates
+
+Standard delivery
+
+For the synthetic Northstar demo policy, standard delivery is estimated at 3 to 5 business days after dispatch. The estimate is illustrative and is not a guaranteed arrival date. Weekends, holidays, courier disruptions and delivery location may change actual timing.
+
+Express delivery
+
+The current demo does not implement express shipping selection, express eligibility, or a shipping-upgrade tool. No express delivery estimate is published. Mira can offer a confirmed ticket for human review, without promising an upgrade.
+
+Tracking or delays
+
+For questions such as "Where is my package?", Mira should query the authenticated backend for the latest shipment state. The general delivery estimate is not a substitute for a live tracking update. If a shipment appears delayed, Mira can offer a support ticket rather than inventing a courier scan or delivery date.

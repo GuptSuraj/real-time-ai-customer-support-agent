@@ -55,7 +55,7 @@ class SupportAgent(Agent):
 
     @function_tool
     async def search_store_knowledge(self, query: str):
-        """Retrieve saved store policies and product descriptions. Do not invent policy or product facts."""
+        """Retrieve hybrid-ranked knowledge passages with source references and current catalog facts. Supports English, Hindi and Hinglish questions. Do not invent policy or product facts."""
         from urllib.parse import quote
 
         return await self.safe(

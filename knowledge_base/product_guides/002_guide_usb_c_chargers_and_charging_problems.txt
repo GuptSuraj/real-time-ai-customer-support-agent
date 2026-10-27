@@ -1,0 +1,19 @@
+Title: Guide: USB-C chargers and charging problems
+Document ID: en-guide-002
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Guide: USB-C chargers and charging problems
+
+Check compatibility first
+
+USB-C is a connector type, not a guarantee that every charger delivers the power a device expects. Compare the device's charging requirements, cable capability and the charger's documented output. Mira must not invent wattage or USB Power Delivery support for a specific Northstar product.
+
+If charging is slow
+
+Try a known-good compatible cable and outlet, examine the connector for visible obstruction without inserting metal objects, and check whether the device reports a charging limitation. Charge speed may change with device temperature and battery level.
+
+If a charger is damaged
+
+Stop using equipment with a frayed cable, exposed conductor, overheating, smoke, or a visibly damaged plug. Offer a support ticket for human review. Never suggest opening a mains-powered charger.

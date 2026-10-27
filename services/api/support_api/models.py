@@ -1,3 +1,6 @@
+from pgvector.sqlalchemy import Vector
+from sqlalchemy import Index
+from sqlalchemy.dialects.postgresql import TSVECTOR
 import time
 import uuid
 from sqlalchemy import JSON, Boolean, Float, ForeignKey, Integer, String, Text, UniqueConstraint
@@ -165,3 +168,67 @@ class Metric(Record, Base):
 
 class WebhookReceipt(Record, Base):
     __tablename__ = "webhook_receipts"
+
+
+# SQLite retains portable metadata for existing unit tests; hybrid indexing requires PostgreSQL.
+
+EMBEDDING_DIMENSIONS = 768
+
+
+class KnowledgeIndex(Record, Base):
+    __tablename__ = "knowledge_indexes"
+    corpus_hash: Mapped[str] = mapped_column(String(64))
+    business_fingerprint: Mapped[str] = mapped_column(String(64))
+    embedding_model: Mapped[str] = mapped_column(String(200))
+    embedding_dimensions: Mapped[int] = mapped_column(Integer, default=EMBEDDING_DIMENSIONS)
+    pipeline_version: Mapped[str] = mapped_column(String(50))
+    status: Mapped[str] = mapped_column(String(20), default="active")
+
+
+class KnowledgeDocument(Record, Base):
+    __tablename__ = "knowledge_documents"
+    __table_args__ = (
+        UniqueConstraint("index_id", "source_path"),
+        UniqueConstraint("index_id", "document_id"),
+    )
+    index_id: Mapped[str] = mapped_column(ForeignKey("knowledge_indexes.id", ondelete="CASCADE"), index=True)
+    document_id: Mapped[str] = mapped_column(String(200))
+    source_path: Mapped[str] = mapped_column(String(500))
+    title: Mapped[str] = mapped_column(String(300))
+    category: Mapped[str] = mapped_column(String(30))
+    version: Mapped[str] = mapped_column(String(100))
+    checksum: Mapped[str] = mapped_column(String(64))
+
+
+class KnowledgeChunk(Record, Base):
+    __tablename__ = "knowledge_chunks"
+    __table_args__ = (UniqueConstraint("document_id", "ordinal"),)
+    index_id: Mapped[str] = mapped_column(ForeignKey("knowledge_indexes.id", ondelete="CASCADE"), index=True)
+    document_id: Mapped[str] = mapped_column(
+        ForeignKey("knowledge_documents.id", ondelete="CASCADE"), index=True
+    )
+    ordinal: Mapped[int] = mapped_column(Integer)
+    section: Mapped[str] = mapped_column(String(500))
+    text: Mapped[str] = mapped_column(Text)
+    content_hash: Mapped[str] = mapped_column(String(64))
+    embedding: Mapped[list] = mapped_column(Vector(EMBEDDING_DIMENSIONS).with_variant(JSON(), "sqlite"))
+    search_vector: Mapped[str | None] = mapped_column(
+        TSVECTOR().with_variant(Text(), "sqlite"), nullable=True
+    )
+
+
+Index("ix_knowledge_chunks_fts", KnowledgeChunk.search_vector, postgresql_using="gin").ddl_if(
+    dialect="postgresql"
+)
+Index(
+    "ix_knowledge_chunks_vector",
+    KnowledgeChunk.embedding,
+    postgresql_using="hnsw",
+    postgresql_ops={"embedding": "vector_cosine_ops"},
+).ddl_if(dialect="postgresql")
+Index(
+    "uq_knowledge_index_active",
+    KnowledgeIndex.status,
+    unique=True,
+    postgresql_where=KnowledgeIndex.status == "active",
+).ddl_if(dialect="postgresql")

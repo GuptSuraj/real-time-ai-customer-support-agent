@@ -5,7 +5,7 @@ import secrets
 import time
 from contextlib import asynccontextmanager
 from collections import defaultdict, deque
-from fastapi import FastAPI, HTTPException, Request, Response
+from fastapi import FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from livekit import api as lkapi
@@ -13,6 +13,8 @@ from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
 from sqlalchemy import func, select, text, update
 from sqlalchemy.exc import IntegrityError
 from . import livekit_service as lk
+from .business_rules import ACTION_TTL_SECONDS, CHALLENGE_TTL_SECONDS, HANDOFF_TIMEOUT_SECONDS
+from .knowledge.retrieval import retrieve
 from .config import settings
 from .db import SessionLocal
 from .domain import (
@@ -49,6 +51,7 @@ from .models import (
     uid,
 )
 from .schemas import (
+    KnowledgeResponse,
     ActionOut,
     CallDetailOut,
     ConnectionOut,
@@ -125,7 +128,19 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PATCH"],
     allow_headers=["Content-Type", "X-CSRF-Token"],
 )
-FastAPIInstrumentor.instrument_app(app)
+
+
+def redact_knowledge_query(span, scope):
+    if span and span.is_recording() and scope.get("path") == "/internal/knowledge":
+        # Preserve trace timing and correlation without exporting the caller's question in URLs.
+        path = scope.get("path", "")
+        span.set_attribute("http.url", path)
+        span.set_attribute("http.target", path)
+        span.set_attribute("url.full", path)
+        span.set_attribute("url.query", "[redacted]")
+
+
+FastAPIInstrumentor.instrument_app(app, server_request_hook=redact_knowledge_query)
 
 
 @app.middleware("http")
@@ -401,7 +416,9 @@ def challenge(call_id: str, auth: Auth, db: DB):
         previous.expires_at = 0
         previous.verified_until = None
     code = f"{secrets.randbelow(1000000):06}"
-    challenge = Verification(call_id=call.id, code_hash=digest(code), expires_at=time.time() + 120)
+    challenge = Verification(
+        call_id=call.id, code_hash=digest(code), expires_at=time.time() + CHALLENGE_TTL_SECONDS
+    )
     db.add(challenge)
     db.commit()
     # Demo-only challenge is shown to the authenticated customer, never sent to the model.
@@ -426,7 +443,7 @@ def complete_verification(call_id: str, body: VerifyInput, auth: Auth, db: DB):
         db.commit()
         raise HTTPException(400, "Incorrect code")
     challenge.consumed = True
-    challenge.verified_until = time.time() + 300
+    challenge.verified_until = time.time() + ACTION_TTL_SECONDS
     audit(db, auth[0].id, "identity_verified", call.customer_id, call.id)
     db.commit()
     return {"verified": True}
@@ -663,15 +680,15 @@ def agent_context(call: AgentCall, db: DB):
     }
 
 
-@app.get("/internal/knowledge")
-def agent_knowledge(call: AgentCall, db: DB, q: str = ""):
-    terms = q.lower().split()[:8]
-    rows = list(db.scalars(select(Policy)))
-    rows.sort(key=lambda p: sum(t in (p.title + p.body).lower() for t in terms), reverse=True)
-    return {
-        "policies": [serialize(p) for p in rows[:4]],
-        "products": [serialize(p) for p in db.scalars(select(Product))],
-    }
+@app.get("/internal/knowledge", response_model=KnowledgeResponse)
+def agent_knowledge(
+    call: AgentCall, db: DB, q: str | None = Query(default=None, min_length=1, max_length=500)
+):
+    if q is not None and not q.strip():
+        raise HTTPException(422, "Knowledge question cannot be blank")
+    result = retrieve(db, q, call_id=call.id)
+    db.commit()
+    return result
 
 
 @app.post("/internal/actions", response_model=ActionOut)
@@ -688,7 +705,7 @@ def agent_escalate(body: ReasonInput, call: AgentCall, db: DB):
     )
     esc = db.scalar(select(Escalation).where(Escalation.call_id == call.id))
     if not esc:
-        esc = Escalation(call_id=call.id, reason=body.reason, deadline=time.time() + 60)
+        esc = Escalation(call_id=call.id, reason=body.reason, deadline=time.time() + HANDOFF_TIMEOUT_SECONDS)
         db.add(esc)
     elif esc.status == "unavailable":
         raise HTTPException(409, "No representative available; offer a confirmed callback ticket")

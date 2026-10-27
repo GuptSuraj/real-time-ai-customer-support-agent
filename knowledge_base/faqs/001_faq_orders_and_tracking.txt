@@ -1,0 +1,19 @@
+Title: FAQ: Orders and tracking
+Document ID: en-faq-001
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+FAQ: Orders and tracking
+
+How can I track my order?
+
+Sign into your Northstar demo account and ask Mira to check your order. Mira uses the authenticated backend to get the current status. This help article does not hold tracking updates or courier scans.
+
+Can Mira see an order from another account?
+
+No. Orders are scoped to the signed-in customer. Providing an order number does not grant access to someone else's purchase.
+
+My order is not showing up. What now?
+
+Check that you are signed into the expected demo account. If it still does not appear, Mira can offer a support ticket for the team to investigate.

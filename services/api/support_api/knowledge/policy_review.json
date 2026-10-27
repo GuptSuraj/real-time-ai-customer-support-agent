@@ -1,0 +1,69 @@
+{
+  "reviewed_on": "2026-10-27",
+  "business_contract": {
+    "return_window_days": 30,
+    "standard_shipping_business_days": [
+      3,
+      5
+    ],
+    "return_scope": "whole_order",
+    "return_prerequisites": [
+      "delivered",
+      "within_window",
+      "all_products_returnable",
+      "no_existing_return"
+    ],
+    "refund_requires_received_return": true,
+    "refund_requires_human_approval": true,
+    "payments": "simulated",
+    "action_confirmation": "authenticated_portal_with_one_use_verification",
+    "action_ttl_seconds": 300,
+    "challenge_ttl_seconds": 120,
+    "handoff_timeout_seconds": 60,
+    "unsupported_tools": [
+      "exchange",
+      "partial_return",
+      "cancel_order",
+      "change_address",
+      "express_shipping",
+      "stock_lookup"
+    ]
+  },
+  "business_fingerprint": "68f4eb12cb0692a71fdd505da36f6793660a0993108be16ffc23b0e67c9a94d8",
+  "documents": {
+    "faqs/001_faq_orders_and_tracking.txt": "c6586775df1f54d8a80d10a2253cf39b0b5e27ddcc5be5c52599dcfbcaf65c7b",
+    "faqs/002_faq_delivery_and_shipping.txt": "7772e2d9ef60c1b870601f507d12c860461debb2e46def10a4e1af47efa2655f",
+    "faqs/003_faq_returns_and_exchanges.txt": "a5fe16f4f3e7fbd32b8d55cfb1ae485b89a575423204de92d55735ad953a06b1",
+    "faqs/004_faq_refunds.txt": "2ca89977e2c5f316fb293ab6a1b4a9334021f69a35e91a075ceb5fbfc84dffd9",
+    "faqs/005_faq_talking_to_a_human_and_tickets.txt": "27d11eb810e96bc076a7e6416c27378923f83c50cee994e383f81598924a90b1",
+    "faqs/006_faq_account_protection_and_language.txt": "6542eabed177824313c4d1e7b18ed318391ec9e7c656bf72481a71fbe7ecf469",
+    "policies/001_about_northstar_and_mira.txt": "6092aaf9c854c60fb9b83decbf55ad2abd1ebd0c305c02f8a3d2cf49d9dfbeb1",
+    "policies/002_order_statuses_and_tracking.txt": "06cb51531c03da27e772d6434dac531a0b81c7bbf1dd5dfbfa03bab3b943e108",
+    "policies/003_shipping_estimates.txt": "fb2a4a543378896fa32e155bab2252298252ac46c72a25631a0fa42d5b3caec2",
+    "policies/004_late_missing_and_damaged_deliveries.txt": "34b0f301f601afc3827fd23da00f4b0d71b8865ce2b72b016c46a4edfb52eb88",
+    "policies/005_delivery_address_changes.txt": "6f7358e668c5a286779875d6e358fe3fe54477599241fca4f278a014fbbf09c2",
+    "policies/006_order_cancellation_requests.txt": "06dd87536b16d013ff5c09f53d91834c57fad4b82a4419988127dd763f1b85d0",
+    "policies/007_return_window_and_return_scope.txt": "8a79ca6ffa56a6f08e2755109f1072856cb0d29516b10455bed4eabb8b73977c",
+    "policies/008_return_eligibility_and_exclusions.txt": "a26a7ecd14855ca18923c897595c75d3e137d77b31bdf72d6f3011bf52f94085",
+    "policies/009_how_a_customer_creates_a_return.txt": "891f358d1ab6e1555454783d5f47fafc2584aeeede2f4e37aa394a3160fd735c",
+    "policies/010_returns_for_damaged_defective_or_wrong_items.txt": "054f1b5a84d9f7ac0ec5424202bba0a49cf689bdd944357eb16650005cccb305",
+    "policies/011_exchanges_and_partial_returns.txt": "9ff128db0cf3a8f2ab8af53f3b727b70831f9795fddf0bc53229d193b7c7817a",
+    "policies/012_refund_requests_and_human_approval.txt": "dfa9ddce813fae6bcee6d87dfd32025f8d04d174eebe638d955f67097a66f989",
+    "policies/013_refund_status_and_timelines.txt": "4cb044568d73d95c1265e25d3a84a4830a874db99fb94e340ffa3dcc4d507f07",
+    "policies/014_payments_and_billing_in_the_demo.txt": "dfc6680a603b1f5e88f777fad6c10abfaffb7113ec91a27f7ef1626ed8f31ecb",
+    "policies/015_warranty_and_product_defects.txt": "dc5e35bf34b42fb4c36bc14da470b9e367fb64e8e191def9ab308dd9f7ee4b16",
+    "policies/016_discounts_promotions_and_promo_codes.txt": "df3bee0b5b0f164099bf5c1c4383b4d10fa607066d7195c65c9e29f3c36fff24",
+    "policies/017_customer_login_and_action_verification.txt": "f150ed9361ae1d06b98088a6215d5c0b1908f201aaa523219e99b982b2088951",
+    "policies/018_support_tickets_and_follow_up_requests.txt": "f1e1e9e90cbeabed5a871986baf07cfa1a97c0ec7021fad246cfc24d5c9c7b32",
+    "policies/019_speaking_with_a_human_representative.txt": "80771510918037335863cb59992293cec67813289ab6356309004a9aedf14424",
+    "policies/020_call_transcripts_summaries_and_privacy.txt": "26f9d1bae62da5ca68b63ccdc2ae80d6d9d7c69c7c1d8f655ec65f1cb75fc140",
+    "policies/021_product_information_price_and_stock.txt": "f4c4adc3f2b53a8137d3c96d433a58840d003c812f58d6805b7f400099847411",
+    "policies/022_shipping_fees_and_taxes.txt": "0cb7c8f1273a9271a89cabe629359fcc5dcbdc4c849b318cee9d64e8713832e6",
+    "policies/023_suspicious_messages_and_account_safety.txt": "cf639f4444bb9fc1ed00b071aa85d2c36a86891e73632909c18858dd7afbcab2",
+    "product_guides/001_guide_troubleshooting_wireless_headphones.txt": "8c7f9e690bdcd457af101618250a012413ad4ec972833c9efd7983a63084e1e6",
+    "product_guides/002_guide_usb_c_chargers_and_charging_problems.txt": "04f16d177dd34c252f17efe548d3b90ea0621875199daa99c10f10ed8851269f",
+    "product_guides/003_guide_monitor_display_and_connectivity_problems.txt": "920e25b682c19d4715b632a4638a0ed999abd13202ccf0baae1f198aa71723f5",
+    "product_guides/004_guide_safe_product_care_and_cleaning.txt": "146d58d59f0a167ad088926378a169bd0cb122e4d11cea10f80f4e6c602c57f1"
+  },
+  "review_method": "Source-level engineering review plus numeric checks; hashes require explicit re-review for any document or authority change"
+}

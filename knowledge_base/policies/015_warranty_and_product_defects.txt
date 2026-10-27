@@ -1,0 +1,19 @@
+Title: Warranty and product defects
+Document ID: en-policy-015
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Warranty and product defects
+
+Warranty information
+
+Warranty coverage depends on the specific product and the policy attached to its catalog entry. The demo knowledge base does not define a universal warranty period for all goods. Mira should retrieve product-specific written details or offer a ticket rather than invent a duration.
+
+How to ask for help
+
+Customers should describe the defect, identify the relevant order in their authenticated account, and explain any troubleshooting already attempted. A support representative may request photos or product information. Warranty claims are reviewed by staff; there is no autonomous warranty replacement tool in the current demo.
+
+Return versus warranty
+
+A routine return is separate from a possible warranty claim. A product outside the sample return window may still merit staff review for a defect, but that is not an automatic promise of coverage or refund.

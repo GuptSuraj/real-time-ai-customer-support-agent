@@ -1,0 +1,19 @@
+Title: Support tickets and follow-up requests
+Document ID: en-policy-018
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Support tickets and follow-up requests
+
+Creating a ticket
+
+Mira can prepare a support ticket or callback request for an authenticated customer. Before creating it, the app shows the proposal and requires an expiring verification challenge and explicit on-screen confirmation. Repeated confirmations should return the existing result rather than creating duplicate tickets.
+
+Ticket information
+
+A support ticket may contain a problem summary, the associated order where relevant, a status, assignment and notes. The customer can review their own tickets. Staff can assign, update and resolve tickets according to role permissions.
+
+When to use a ticket
+
+Tickets are suitable when a return or cancellation requires an exception, a delivery is missing, an address change needs review, or Mira lacks enough verified information. Creating a ticket does not guarantee the requested commercial outcome.

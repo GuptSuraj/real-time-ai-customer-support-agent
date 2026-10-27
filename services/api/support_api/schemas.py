@@ -244,3 +244,42 @@ class DashboardOut(BaseModel):
     returns: list[ReturnOut]
     calls: list[CallOut]
     escalations: list[EscalationDetail]
+
+
+class KnowledgeSourceOut(BaseModel):
+    chunk_id: str
+    document_id: str
+    title: str
+    source_path: str
+    category: str
+    version: str
+    section: str
+    ordinal: int
+    text: str
+    content_hash: str
+    semantic_similarity: float | None
+    rrf_score: float
+    semantic_rank: int | None
+    lexical_rank: int | None
+
+
+class KnowledgePolicyOut(BaseModel):
+    id: str
+    title: str
+    body: str
+    created_at: float | None = None
+
+
+class KnowledgeResponse(BaseModel):
+    status: Literal["ready", "degraded"]
+    mode: Literal["hybrid", "lexical_only", "semantic_only", "legacy", "unavailable"]
+    reason: str | None = None
+    index_id: str | None = None
+    sources: list[KnowledgeSourceOut]
+    policies: list[KnowledgePolicyOut]
+    products: list[ProductOut]
+    business_rules: dict
+    authority: str
+    latency_ms: float
+    timings_ms: dict[str, float]
+    no_match: bool = False

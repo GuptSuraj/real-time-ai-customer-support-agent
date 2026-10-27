@@ -127,6 +127,20 @@ To regenerate API types:
 make types
 ```
 
+## Hybrid RAG knowledge base
+
+English documents in root `knowledge_base/` support English, Hindi and Hinglish retrieval with `EMBEDDING_MODEL=gemini-embedding-2` and `EMBEDDING_DIMENSION=768`. Policies were reconciled with the existing 30-day return rule, 3–5 day shipping policy, human refund approval and portal confirmation flow before indexing.
+
+After rebuilding and starting the stack, index the approved documents:
+
+```sh
+docker compose --profile knowledge run --build --rm --no-deps index-knowledge
+```
+
+The database image adds pgvector to the existing PostgreSQL 17 Alpine base. It retains the named data volume. No reset is required. Before indexing, changed documents must pass the source review/fingerprint gate. Until an index exists, the knowledge tool explicitly reports legacy fallback.
+
+See [the knowledge guide](docs/KNOWLEDGE_BASE.md), [policy reconciliation](docs/POLICY_RECONCILIATION.md), and [measured retrieval results](docs/retrieval-verification.json). Ingestion/retrieval code and the English/Hindi/Hinglish relevance datasets live in `services/api/`.
+
 ## Real audio evaluation
 
 See [the evaluation guide](evaluations/README.md). There are **50 distinct scripted scenarios**, including Hindi, interruption, human takeover, backend faults, identity misuse and duplicate confirmation. The runner publishes actual audio into LiveKit and checks persisted backend outcomes. No live evaluation results or performance claims are fabricated.
@@ -152,7 +166,8 @@ Raw audio recording is disabled for the application. Evaluation output recording
 ```text
 apps/web/                 Next.js customer portal and support workspace
 services/api/support_api/ FastAPI, authorization, policies, commerce and state machines
-services/api/alembic/     Frozen initial migration
+services/api/alembic/     Commerce and hybrid knowledge migrations
+knowledge_base/           Reviewed English policies, FAQs and product guides
 services/agent/           LiveKit worker, tools and bounded backend client
 evaluations/              50 scenarios, audio preparation, runner and report
 scripts/                  Credential preflight, load checks and API type export
@@ -161,4 +176,4 @@ docs/                     Architecture, demo, API schema and verification record
 
 Detailed architecture and endpoint contracts: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Local verification and outstanding external checks: [docs/VERIFICATION.md](docs/VERIFICATION.md).
 
-The project deliberately uses native LiveKit orchestration and keyword policy retrieval. LangGraph, Qdrant, Redis and MCP are deferred. Public hosting, telephony, email/SMS verification and real payment integrations are outside this local demo.
+The project uses native LiveKit orchestration and API-owned hybrid knowledge retrieval with PostgreSQL full-text search, pgvector, multilingual Gemini Embedding 2 vectors, and RRF. LangGraph, Qdrant, Redis and MCP remain deferred. Public hosting, telephony, email/SMS verification and real payment integrations are outside this local demo.

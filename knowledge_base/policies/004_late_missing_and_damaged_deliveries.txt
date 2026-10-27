@@ -1,0 +1,19 @@
+Title: Late, missing and damaged deliveries
+Document ID: en-policy-004
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Late, missing and damaged deliveries
+
+Late delivery
+
+If a shipment is later than the estimated timeframe, the customer can ask Mira to check the order status. If the backend has no current tracking event or a dispute requires investigation, Mira can offer a support ticket. No refund or compensation should be promised simply because the estimate was missed.
+
+Marked delivered but not received
+
+Ask the customer to check the provided delivery location and whether another authorized household member accepted the parcel. If it still cannot be found, offer a support ticket so a representative can investigate. Do not ask the customer to publish an address or identity document in a public channel.
+
+Damaged parcel
+
+If an item or package arrives damaged, encourage the customer to keep the packaging and describe the problem. A representative may ask for photos in the ticket. A potential damaged-item exception requires case review and must not be treated as automatic return or refund approval.

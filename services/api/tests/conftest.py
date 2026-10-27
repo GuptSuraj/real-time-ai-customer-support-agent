@@ -1,5 +1,9 @@
 import os
 
+os.environ["LANGFUSE_PUBLIC_KEY"] = ""
+os.environ["LANGFUSE_SECRET_KEY"] = ""
+os.environ["OTEL_EXPORTER_OTLP_ENDPOINT"] = ""
+
 os.environ["DATABASE_URL"] = "sqlite://"
 os.environ["SESSION_SECRET"] = "test-secret-at-least-32-characters-long"
 

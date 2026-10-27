@@ -1,0 +1,19 @@
+Title: FAQ: Returns and exchanges
+Document ID: en-faq-003
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+FAQ: Returns and exchanges
+
+How many days do I have to return a product?
+
+The sample Northstar policy uses a 30-calendar-day request window from delivery, subject to exclusions and the backend's eligibility check. This matches the current FastAPI eligibility rule.
+
+Can I return only one item in my order?
+
+Not using the current automated workflow. Mira can only propose a whole-order return. For a partial return, ask for a support ticket.
+
+Can Mira exchange a product for another size?
+
+Mira cannot execute exchanges in this demo. It can create a confirmed support ticket for staff review, without guaranteeing stock or a replacement.

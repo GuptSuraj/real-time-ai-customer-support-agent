@@ -1,0 +1,527 @@
+[
+  {
+    "id": "return-window-en",
+    "language": "en",
+    "query": "How many days after delivery can I request a return?",
+    "relevant_documents": [
+      "en-policy-007",
+      "en-faq-003"
+    ]
+  },
+  {
+    "id": "return-window-hi",
+    "language": "hi",
+    "query": "डिलीवरी के कितने दिनों बाद तक सामान वापस कर सकता हूँ?",
+    "relevant_documents": [
+      "en-policy-007",
+      "en-faq-003"
+    ]
+  },
+  {
+    "id": "return-window-hinglish",
+    "language": "hinglish",
+    "query": "Delivery ke kitne din baad tak return kar sakta hoon?",
+    "relevant_documents": [
+      "en-policy-007",
+      "en-faq-003"
+    ]
+  },
+  {
+    "id": "refund-approval-en",
+    "language": "en",
+    "query": "Does every refund need a human approval and a received return?",
+    "relevant_documents": [
+      "en-policy-012",
+      "en-faq-004"
+    ]
+  },
+  {
+    "id": "refund-approval-hi",
+    "language": "hi",
+    "query": "क्या रिफंड के लिए वापस आया सामान और इंसान की मंजूरी जरूरी है?",
+    "relevant_documents": [
+      "en-policy-012",
+      "en-faq-004"
+    ]
+  },
+  {
+    "id": "refund-approval-hinglish",
+    "language": "hinglish",
+    "query": "Refund ke liye received return aur human approval zaroori hai kya?",
+    "relevant_documents": [
+      "en-policy-012",
+      "en-faq-004"
+    ]
+  },
+  {
+    "id": "refund-timeline-en",
+    "language": "en",
+    "query": "When will my refund reach my bank and is that date guaranteed?",
+    "relevant_documents": [
+      "en-policy-013",
+      "en-faq-004"
+    ]
+  },
+  {
+    "id": "refund-timeline-hi",
+    "language": "hi",
+    "query": "मेरे पैसे बैंक में कब आएंगे, क्या तारीख पक्की है?",
+    "relevant_documents": [
+      "en-policy-013",
+      "en-faq-004"
+    ]
+  },
+  {
+    "id": "refund-timeline-hinglish",
+    "language": "hinglish",
+    "query": "Mere refund ke paise bank mein kab aayenge, date guaranteed hai kya?",
+    "relevant_documents": [
+      "en-policy-013",
+      "en-faq-004"
+    ]
+  },
+  {
+    "id": "shipping-en",
+    "language": "en",
+    "query": "What is the standard delivery estimate, and is express shipping available?",
+    "relevant_documents": [
+      "en-policy-003",
+      "en-faq-002"
+    ]
+  },
+  {
+    "id": "shipping-hi",
+    "language": "hi",
+    "query": "सामान पहुँचने में कितने दिन लगते हैं और क्या एक्सप्रेस डिलीवरी है?",
+    "relevant_documents": [
+      "en-policy-003",
+      "en-faq-002"
+    ]
+  },
+  {
+    "id": "shipping-hinglish",
+    "language": "hinglish",
+    "query": "Standard delivery kitne din leti hai aur express shipping available hai kya?",
+    "relevant_documents": [
+      "en-policy-003",
+      "en-faq-002"
+    ]
+  },
+  {
+    "id": "human-en",
+    "language": "en",
+    "query": "How can I talk to a human and what happens if no representative answers?",
+    "relevant_documents": [
+      "en-policy-019",
+      "en-faq-005"
+    ]
+  },
+  {
+    "id": "human-hi",
+    "language": "hi",
+    "query": "मुझे इंसान से बात करनी है, अगर कोई जवाब न दे तो क्या होगा?",
+    "relevant_documents": [
+      "en-policy-019",
+      "en-faq-005"
+    ]
+  },
+  {
+    "id": "human-hinglish",
+    "language": "hinglish",
+    "query": "Mujhe human agent se baat karni hai, koi answer nahi kare to kya hoga?",
+    "relevant_documents": [
+      "en-policy-019",
+      "en-faq-005"
+    ]
+  },
+  {
+    "id": "verification-en",
+    "language": "en",
+    "query": "Why must I verify and confirm an action on screen instead of saying yes?",
+    "relevant_documents": [
+      "en-policy-017",
+      "en-faq-006"
+    ]
+  },
+  {
+    "id": "verification-hi",
+    "language": "hi",
+    "query": "सिर्फ हाँ बोलने की जगह स्क्रीन पर पुष्टि और वेरिफिकेशन क्यों करना पड़ता है?",
+    "relevant_documents": [
+      "en-policy-017",
+      "en-faq-006"
+    ]
+  },
+  {
+    "id": "verification-hinglish",
+    "language": "hinglish",
+    "query": "Sirf haan bolne se kaam kyun nahi hota, screen par verify aur confirm kyun karna hai?",
+    "relevant_documents": [
+      "en-policy-017",
+      "en-faq-006"
+    ]
+  },
+  {
+    "id": "partial-en",
+    "language": "en",
+    "query": "Can I return only one item or exchange it for a different size?",
+    "relevant_documents": [
+      "en-policy-011",
+      "en-faq-003"
+    ]
+  },
+  {
+    "id": "partial-hi",
+    "language": "hi",
+    "query": "क्या मैं केवल एक चीज वापस करके दूसरी साइज़ ले सकता हूँ?",
+    "relevant_documents": [
+      "en-policy-011",
+      "en-faq-003"
+    ]
+  },
+  {
+    "id": "partial-hinglish",
+    "language": "hinglish",
+    "query": "Order ka sirf ek item return ya different size se exchange kar sakta hoon?",
+    "relevant_documents": [
+      "en-policy-011",
+      "en-faq-003"
+    ]
+  },
+  {
+    "id": "cancellation-en",
+    "language": "en",
+    "query": "Can Mira cancel an order before it ships?",
+    "relevant_documents": [
+      "en-policy-006"
+    ]
+  },
+  {
+    "id": "cancellation-hi",
+    "language": "hi",
+    "query": "क्या मीरा शिपिंग से पहले ऑर्डर रद्द कर सकती है?",
+    "relevant_documents": [
+      "en-policy-006"
+    ]
+  },
+  {
+    "id": "cancellation-hinglish",
+    "language": "hinglish",
+    "query": "Shipping se pehle Mira mera order cancel kar sakti hai?",
+    "relevant_documents": [
+      "en-policy-006"
+    ]
+  },
+  {
+    "id": "address-en",
+    "language": "en",
+    "query": "Can you change the delivery address on a shipped order?",
+    "relevant_documents": [
+      "en-policy-005",
+      "en-faq-002"
+    ]
+  },
+  {
+    "id": "address-hi",
+    "language": "hi",
+    "query": "भेजे हुए ऑर्डर का डिलीवरी पता बदल सकते हैं?",
+    "relevant_documents": [
+      "en-policy-005",
+      "en-faq-002"
+    ]
+  },
+  {
+    "id": "address-hinglish",
+    "language": "hinglish",
+    "query": "Shipped order ka delivery address badal sakte ho?",
+    "relevant_documents": [
+      "en-policy-005",
+      "en-faq-002"
+    ]
+  },
+  {
+    "id": "warranty-en",
+    "language": "en",
+    "query": "What warranty coverage and replacement period do products have?",
+    "relevant_documents": [
+      "en-policy-015"
+    ]
+  },
+  {
+    "id": "warranty-hi",
+    "language": "hi",
+    "query": "सामान की वारंटी कितनी है और रिप्लेसमेंट कब मिलता है?",
+    "relevant_documents": [
+      "en-policy-015"
+    ]
+  },
+  {
+    "id": "warranty-hinglish",
+    "language": "hinglish",
+    "query": "Product ki warranty kitni hai aur replacement kab milega?",
+    "relevant_documents": [
+      "en-policy-015"
+    ]
+  },
+  {
+    "id": "headphones-en",
+    "language": "en",
+    "query": "My wireless headphones will not connect over Bluetooth. What should I try?",
+    "relevant_documents": [
+      "en-guide-001"
+    ]
+  },
+  {
+    "id": "headphones-hi",
+    "language": "hi",
+    "query": "मेरे वायरलेस हेडफ़ोन ब्लूटूथ से कनेक्ट नहीं हो रहे, क्या करूँ?",
+    "relevant_documents": [
+      "en-guide-001"
+    ]
+  },
+  {
+    "id": "headphones-hinglish",
+    "language": "hinglish",
+    "query": "Mere wireless headphones Bluetooth se connect nahi ho rahe, kya try karun?",
+    "relevant_documents": [
+      "en-guide-001"
+    ]
+  },
+  {
+    "id": "charger-en",
+    "language": "en",
+    "query": "My USB-C charger is charging slowly. How do I check compatibility?",
+    "relevant_documents": [
+      "en-guide-002"
+    ]
+  },
+  {
+    "id": "charger-hi",
+    "language": "hi",
+    "query": "यूएसबी सी चार्जर से चार्जिंग धीमी है, अनुकूलता कैसे जाँचूँ?",
+    "relevant_documents": [
+      "en-guide-002"
+    ]
+  },
+  {
+    "id": "charger-hinglish",
+    "language": "hinglish",
+    "query": "USB-C charger slow charging kar raha hai, compatibility kaise check karun?",
+    "relevant_documents": [
+      "en-guide-002"
+    ]
+  },
+  {
+    "id": "monitor-en",
+    "language": "en",
+    "query": "My monitor has no image. How do I check HDMI and the selected input?",
+    "relevant_documents": [
+      "en-guide-003"
+    ]
+  },
+  {
+    "id": "monitor-hi",
+    "language": "hi",
+    "query": "मॉनिटर पर तस्वीर नहीं आ रही, एचडीएमआई और इनपुट कैसे जाँचूँ?",
+    "relevant_documents": [
+      "en-guide-003"
+    ]
+  },
+  {
+    "id": "monitor-hinglish",
+    "language": "hinglish",
+    "query": "Monitor par image nahi aa rahi, HDMI aur input kaise check karun?",
+    "relevant_documents": [
+      "en-guide-003"
+    ]
+  },
+  {
+    "id": "cleaning-en",
+    "language": "en",
+    "query": "How should I safely clean and store electronic products?",
+    "relevant_documents": [
+      "en-guide-004"
+    ]
+  },
+  {
+    "id": "cleaning-hi",
+    "language": "hi",
+    "query": "इलेक्ट्रॉनिक सामान की सुरक्षित सफाई और रखरखाव कैसे करूँ?",
+    "relevant_documents": [
+      "en-guide-004"
+    ]
+  },
+  {
+    "id": "cleaning-hinglish",
+    "language": "hinglish",
+    "query": "Electronics ki safe safai aur storage kaise karun?",
+    "relevant_documents": [
+      "en-guide-004"
+    ]
+  },
+  {
+    "id": "privacy-en",
+    "language": "en",
+    "query": "What call transcripts and summaries do you store and what is the retention period?",
+    "relevant_documents": [
+      "en-policy-020"
+    ]
+  },
+  {
+    "id": "privacy-hi",
+    "language": "hi",
+    "query": "आप बातचीत के ट्रांसक्रिप्ट और सारांश रखते हैं? कितने समय तक?",
+    "relevant_documents": [
+      "en-policy-020"
+    ]
+  },
+  {
+    "id": "privacy-hinglish",
+    "language": "hinglish",
+    "query": "Call ke transcripts aur summaries store hote hain? Retention kitni hai?",
+    "relevant_documents": [
+      "en-policy-020"
+    ]
+  },
+  {
+    "id": "phishing-en",
+    "language": "en",
+    "query": "Someone claiming to be support sent a suspicious payment link. What should I do?",
+    "relevant_documents": [
+      "en-policy-023"
+    ]
+  },
+  {
+    "id": "phishing-hi",
+    "language": "hi",
+    "query": "सपोर्ट के नाम पर किसी ने संदिग्ध पेमेंट लिंक भेजा है, क्या करूँ?",
+    "relevant_documents": [
+      "en-policy-023"
+    ]
+  },
+  {
+    "id": "phishing-hinglish",
+    "language": "hinglish",
+    "query": "Support ke naam par suspicious payment link aaya hai, kya karun?",
+    "relevant_documents": [
+      "en-policy-023"
+    ]
+  },
+  {
+    "id": "prices-en",
+    "language": "en",
+    "query": "Where do current product prices and stock availability come from?",
+    "relevant_documents": [
+      "en-policy-021"
+    ]
+  },
+  {
+    "id": "prices-hi",
+    "language": "hi",
+    "query": "सामान की मौजूदा कीमत और स्टॉक की जानकारी कहाँ से मिलती है?",
+    "relevant_documents": [
+      "en-policy-021"
+    ]
+  },
+  {
+    "id": "prices-hinglish",
+    "language": "hinglish",
+    "query": "Current product price aur stock availability kahan se aati hai?",
+    "relevant_documents": [
+      "en-policy-021"
+    ]
+  },
+  {
+    "id": "promotions-en",
+    "language": "en",
+    "query": "My discount promo code is not working. Can I combine two codes?",
+    "relevant_documents": [
+      "en-policy-016"
+    ]
+  },
+  {
+    "id": "promotions-hi",
+    "language": "hi",
+    "query": "मेरा डिस्काउंट कूपन नहीं चल रहा, क्या दो कोड एक साथ लगा सकता हूँ?",
+    "relevant_documents": [
+      "en-policy-016"
+    ]
+  },
+  {
+    "id": "promotions-hinglish",
+    "language": "hinglish",
+    "query": "Mera discount promo code kaam nahi kar raha, do codes combine kar sakta hoon?",
+    "relevant_documents": [
+      "en-policy-016"
+    ]
+  },
+  {
+    "id": "fees-en",
+    "language": "en",
+    "query": "What shipping charges and tax rates apply to my order?",
+    "relevant_documents": [
+      "en-policy-022"
+    ]
+  },
+  {
+    "id": "fees-hi",
+    "language": "hi",
+    "query": "मेरे ऑर्डर पर शिपिंग फीस और टैक्स कितना लगता है?",
+    "relevant_documents": [
+      "en-policy-022"
+    ]
+  },
+  {
+    "id": "fees-hinglish",
+    "language": "hinglish",
+    "query": "Mere order par shipping fees aur tax kitna lagega?",
+    "relevant_documents": [
+      "en-policy-022"
+    ]
+  },
+  {
+    "id": "ownership-en",
+    "language": "en",
+    "query": "Can Mira see an order belonging to another account if I provide its number?",
+    "relevant_documents": [
+      "en-policy-002",
+      "en-faq-001"
+    ]
+  },
+  {
+    "id": "ownership-hi",
+    "language": "hi",
+    "query": "दूसरे खाते का ऑर्डर नंबर देने पर क्या मीरा उसकी जानकारी दिखाएगी?",
+    "relevant_documents": [
+      "en-policy-002",
+      "en-faq-001"
+    ]
+  },
+  {
+    "id": "ownership-hinglish",
+    "language": "hinglish",
+    "query": "Dusre account ka order number doon to Mira uski details dikha degi?",
+    "relevant_documents": [
+      "en-policy-002",
+      "en-faq-001"
+    ]
+  },
+  {
+    "id": "out-of-domain-en",
+    "language": "en",
+    "query": "Explain the tectonic history of Mars.",
+    "relevant_documents": []
+  },
+  {
+    "id": "out-of-domain-hi",
+    "language": "hi",
+    "query": "मंगल ग्रह का भूवैज्ञानिक इतिहास समझाइए।",
+    "relevant_documents": []
+  },
+  {
+    "id": "out-of-domain-hinglish",
+    "language": "hinglish",
+    "query": "Mars planet ka geological history batao.",
+    "relevant_documents": []
+  }
+]

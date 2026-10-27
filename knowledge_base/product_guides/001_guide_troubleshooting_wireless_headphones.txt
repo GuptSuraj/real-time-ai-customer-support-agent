@@ -1,0 +1,19 @@
+Title: Guide: Troubleshooting wireless headphones
+Document ID: en-guide-001
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Guide: Troubleshooting wireless headphones
+
+Bluetooth connection problems
+
+Confirm that the headphones are charged and in pairing mode according to their own manual. On the phone or computer, remove a stale saved Bluetooth pairing if appropriate, then pair again. Nearby devices may auto-connect and prevent a new connection. Exact steps vary by model.
+
+Audio only on one side or distorted sound
+
+Check the playback balance and output device, try a different app, and test a second source device if available. If the product uses removable ear tips, ensure they are fitted correctly. Avoid opening the device or attempting internal electrical repairs.
+
+Next step if unresolved
+
+Mira can help identify the relevant authenticated order and create a support ticket for product troubleshooting or a possible defect. Do not promise replacement, return eligibility or warranty coverage without checking the order and product policy.

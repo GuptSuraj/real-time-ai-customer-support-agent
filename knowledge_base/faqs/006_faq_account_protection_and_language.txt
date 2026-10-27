@@ -1,0 +1,19 @@
+Title: FAQ: Account protection and language
+Document ID: en-faq-006
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+FAQ: Account protection and language
+
+Why do I need to confirm an action on screen?
+
+An AI-spoken answer is not a secure authorization method. The demo uses account-scoped data, an expiring on-screen verification challenge and explicit confirmation before creating returns, refund requests or support tickets.
+
+Can I speak Hindi?
+
+The customer portal offers English and Hindi language selection. Actual speech accuracy depends on the connected realtime model and must be validated through live audio testing.
+
+Do I need to share my password with Mira?
+
+No. Never speak or paste account passwords, payment PINs, CVVs or banking OTPs in a support conversation.

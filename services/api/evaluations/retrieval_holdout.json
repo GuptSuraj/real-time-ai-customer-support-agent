@@ -1,0 +1,89 @@
+[
+  {
+    "id": "holdout-hygiene-en",
+    "language": "en",
+    "query": "Are the Everyday Earbuds excluded from change-of-mind returns?",
+    "relevant_documents": [
+      "en-policy-008"
+    ]
+  },
+  {
+    "id": "holdout-hygiene-hi",
+    "language": "hi",
+    "query": "क्या एवरीडे इयरबड्स को मन बदलने पर वापस कर सकते हैं?",
+    "relevant_documents": [
+      "en-policy-008"
+    ]
+  },
+  {
+    "id": "holdout-hygiene-hinglish",
+    "language": "hinglish",
+    "query": "Everyday Earbuds pasand nahi aaye, hygiene ki wajah se return allowed hai ya nahi?",
+    "relevant_documents": [
+      "en-policy-008"
+    ]
+  },
+  {
+    "id": "holdout-callback-en",
+    "language": "en",
+    "query": "Does requesting a callback ticket guarantee someone will call at a specific time?",
+    "relevant_documents": [
+      "en-policy-018",
+      "en-faq-005"
+    ]
+  },
+  {
+    "id": "holdout-callback-hi",
+    "language": "hi",
+    "query": "क्या कॉलबैक टिकट बनाने से तय समय पर फोन आने की गारंटी है?",
+    "relevant_documents": [
+      "en-policy-018",
+      "en-faq-005"
+    ]
+  },
+  {
+    "id": "holdout-callback-hinglish",
+    "language": "hinglish",
+    "query": "Callback ticket se kya exact time par call aane ki guarantee milti hai?",
+    "relevant_documents": [
+      "en-policy-018",
+      "en-faq-005"
+    ]
+  },
+  {
+    "id": "holdout-weather-en",
+    "language": "en",
+    "query": "Will it rain tomorrow in Delhi?",
+    "relevant_documents": []
+  },
+  {
+    "id": "holdout-weather-hi",
+    "language": "hi",
+    "query": "क्या कल दिल्ली में बारिश होगी?",
+    "relevant_documents": []
+  },
+  {
+    "id": "holdout-weather-hinglish",
+    "language": "hinglish",
+    "query": "Kal Delhi mein baarish hogi kya?",
+    "relevant_documents": []
+  },
+  {
+    "id": "holdout-gardening-en",
+    "language": "en",
+    "query": "How do I grow tomatoes in my garden?",
+    "relevant_documents": []
+  },
+  {
+    "id": "holdout-gardening-hi",
+    "language": "hi",
+    "query": "अपने बगीचे में टमाटर कैसे उगाऊँ?",
+    "relevant_documents": []
+  },
+  {
+    "id": "holdout-gardening-hinglish",
+    "language": "hinglish",
+    "query": "Apne garden mein tamatar kaise ugau?",
+    "relevant_documents": []
+  }
+]

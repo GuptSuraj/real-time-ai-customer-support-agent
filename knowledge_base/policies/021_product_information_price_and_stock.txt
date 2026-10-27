@@ -1,0 +1,19 @@
+Title: Product information, price and stock
+Document ID: en-policy-021
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Product information, price and stock
+
+Static versus live product facts
+
+General product usage instructions and policies can live in this knowledge base. Live prices, discounts, variant options, availability and inventory belong to the commerce backend and may change. Mira should use current product data rather than treating an old embedding as an inventory record.
+
+Product comparisons
+
+Mira can discuss general differences between product categories, such as over-ear headphones and earbuds, but product-specific specifications must come from an official product record or guide. Do not invent battery life, Bluetooth version, charging wattage or warranty for an unspecified SKU.
+
+Recommendations
+
+When a user asks for suggestions, Mira can ask about budget and use case, then describe relevant products visible in the current demo catalog. If matching product records are not available, say so instead of fabricating products.

@@ -72,6 +72,11 @@ The worker observes disconnect events for local operation. Webhooks provide serv
 
 ## Deferred production work
 
-This is a single-store, local demo with simulated money. Public deployment needs HTTPS, managed secrets, distributed login limits, retention/deletion jobs, provider quotas/capacity monitoring, durable cleanup/reconciliation after process crashes, production identity verification and payment/warehouse integration. PostgreSQL is the concurrency source of truth; SQLite is an exploration/test convenience.
+This is a single-store, local demo with simulated money. Public deployment needs HTTPS, managed secrets, distributed login limits, retention/deletion jobs, provider quotas/capacity monitoring, durable cleanup/reconciliation after process crashes, production identity verification and payment/warehouse integration. PostgreSQL is the concurrency source of truth; SQLite is an exploration/test convenience. API-owned hybrid RAG and the reviewed corpus are documented in [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md).
 
 Official references: [LiveKit Gemini](https://docs.livekit.io/agents/models/realtime/gemini/), [agent dispatch](https://docs.livekit.io/agents/server/agent-dispatch/), [testing](https://docs.livekit.io/reference/developer-tools/livekit-cli/agent/testing/), [Google model](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-live-preview), [Langfuse OTLP](https://api.reference.langfuse.com/).
+
+
+## Hybrid retrieval update
+
+The existing call-scoped `/internal/knowledge` endpoint now retrieves versioned document chunks with pgvector cosine search and PostgreSQL English full-text search, fused by RRF. Embedding 2 creates 768-dimensional multilingual vectors in the API. The worker keeps its existing HTTP tool and receives source provenance, bounded snippets, live catalog facts and the backend policy contract. Model spaces cannot be mixed; changed sources/business rules require review and atomic reindexing. See [the knowledge guide](KNOWLEDGE_BASE.md) for schema, migration, indexing, fallback, telemetry and evaluation behavior.

@@ -26,7 +26,7 @@ def configure(service):
                 OTLPSpanExporter(
                     endpoint=os.getenv("LANGFUSE_BASE_URL", "https://cloud.langfuse.com").rstrip("/")
                     + "/api/public/otel/v1/traces",
-                    headers={"Authorization": f"Basic {auth}"},
+                    headers={"Authorization": f"Basic {auth}", "x-langfuse-ingestion-version": "4"},
                 )
             )
         )

@@ -1,0 +1,20 @@
+Title: Return eligibility and exclusions
+Document ID: en-policy-008
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Return eligibility and exclusions
+
+Typical eligible condition
+
+The backend requires a delivered order, a request within 30 calendar days, every product flagged returnable, and no existing return. Only whole-order returns are supported. Item condition, accessories and packaging can be discussed with human support, but the current API does not inspect or enforce those additional conditions.
+
+Current exclusions
+
+The catalog's returnable flag controls exclusions. The seeded Everyday Earbuds are non-returnable for hygiene. The demo has no separate final-sale, digital-goods or perishable-goods eligibility fields; do not claim that those checks have run. An order containing any non-returnable product is ineligible for the automated whole-order return.
+
+
+Damaged or incorrect items
+
+Customers reporting a defective, damaged or incorrect product should receive a support path even if a routine return rule may exclude the item. A representative can review evidence and exceptions; the AI must not grant the exception on its own.

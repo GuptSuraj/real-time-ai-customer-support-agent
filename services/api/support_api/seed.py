@@ -2,6 +2,7 @@
 
 import time
 from sqlalchemy import select
+from .business_rules import RETURN_WINDOW_DAYS, STANDARD_SHIPPING_DAYS
 from .config import settings
 from .db import SessionLocal
 from .models import Customer, Order, OrderItem, Policy, Product, Refund, Return, Ticket, User
@@ -156,7 +157,7 @@ def seed(db):
             Policy(
                 id="policy-returns",
                 title="Returns and eligibility",
-                body="Whole-order returns are available within 30 days of delivery for returnable products. Earbuds are non-returnable for hygiene. Defective non-returnable items and partial-order returns require human review. A received return is required for a refund request.",
+                body=f"Whole-order returns are available within {RETURN_WINDOW_DAYS} days of delivery for returnable products. Earbuds are non-returnable for hygiene. Defective non-returnable items and partial-order returns require human review. A received return is required for a refund request.",
             ),
             Policy(
                 id="policy-refunds",
@@ -166,7 +167,7 @@ def seed(db):
             Policy(
                 id="policy-shipping",
                 title="Shipping and support",
-                body="Standard delivery usually takes 3–5 business days. Check the order record for its current status. Support can create a confirmed ticket or connect a human representative. Do not invent tracking numbers or delivery dates.",
+                body=f"Standard delivery usually takes {STANDARD_SHIPPING_DAYS[0]}–{STANDARD_SHIPPING_DAYS[1]} business days. Check the order record for its current status. Support can create a confirmed ticket or connect a human representative. Do not invent tracking numbers or delivery dates.",
             ),
             Policy(
                 id="policy-privacy",

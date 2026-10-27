@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:17-alpine
+        image: pgvector/pgvector:0.8.7-pg17
         env: {POSTGRES_USER: support, POSTGRES_PASSWORD: support, POSTGRES_DB: support_test}
         ports: ["5432:5432"]
         options: >-
@@ -19,6 +19,12 @@ jobs:
       - uses: actions/setup-node@v4
         with: {node-version: 22}
       - run: uv sync --frozen --python 3.12
+      - run: uv run alembic -c services/api/alembic.ini upgrade head
+        env: {DATABASE_URL: "postgresql+psycopg://support:support@localhost:5432/support_test"}
+      - run: uv run alembic -c services/api/alembic.ini check
+        env: {DATABASE_URL: "postgresql+psycopg://support:support@localhost:5432/support_test"}
+      - run: PYTHONPATH=services/api uv run python -m support_api.knowledge audit
+      - run: PYTHONPATH=services/api uv run python -m support_api.knowledge.evaluate --check
       - run: uv run pytest -q
         env: {POSTGRES_TEST_URL: "postgresql+psycopg://support:support@localhost:5432/support_test"}
       - run: pnpm --dir apps/web install --frozen-lockfile

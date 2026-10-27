@@ -1,0 +1,19 @@
+Title: Discounts, promotions and promo codes
+Document ID: en-policy-016
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Discounts, promotions and promo codes
+
+Using promotions
+
+Promotions, discount amounts, expiration dates and redemption limits are dynamic checkout information. Mira can explain that customers should enter a valid promotion code at checkout, but it should not invent an active offer or promise a discount.
+
+Code not working
+
+Common causes include an expired offer, an ineligible product, a minimum cart requirement or use limits. The customer can review the terms shown by checkout. If a specific code fails unexpectedly, Mira can offer a ticket with the code name and error message, without requesting sensitive payment information.
+
+Stacking discounts
+
+Do not assume multiple promo codes can be combined. The backend checkout rules are authoritative and may differ between offers.

@@ -1,0 +1,19 @@
+Title: Guide: Safe product care and cleaning
+Document ID: en-guide-004
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Guide: Safe product care and cleaning
+
+General cleaning
+
+Before cleaning electronics, disconnect power and follow the manufacturer's instructions. Use only suitable nonabrasive materials and avoid allowing liquid into ports or openings. Cleaning advice depends on the product material and should not override its official care label.
+
+Handling and storage
+
+Keep devices away from extreme heat, moisture and physical impact unless the specific product is rated for those conditions. Store accessories together with the order information for easier service requests.
+
+If you do not know the product specification
+
+Mira should identify the product from a live catalog or the authenticated order. Do not guess waterproof ratings, charging requirements, certifications, or warranty terms from a generic product category.

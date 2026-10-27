@@ -22,8 +22,10 @@ def postgres():
     admin = create_engine(url)
     schema = "support_test_" + uuid.uuid4().hex
     with admin.begin() as connection:
+        connection.execute(text("CREATE EXTENSION IF NOT EXISTS vector WITH SCHEMA public"))
         connection.execute(text(f'CREATE SCHEMA "{schema}"'))
-    engine = create_engine(url, connect_args={"options": f"-csearch_path={schema}"})
+    engine = create_engine(url, connect_args={"options": f"-csearch_path={schema},public"},
+                           execution_options={"schema_translate_map": {None: schema}})
     Base.metadata.create_all(engine)
     factory = sessionmaker(bind=engine, expire_on_commit=False)
     with factory() as db:

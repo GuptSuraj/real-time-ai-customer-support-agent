@@ -1,6 +1,9 @@
 services:
   db:
-    image: postgres:17-alpine
+    image: northstar-postgres:17-pgvector-0.8.7
+    build:
+      context: .
+      dockerfile: services/api/postgres/Dockerfile
     environment:
       POSTGRES_USER: support
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-support}
@@ -49,6 +52,16 @@ services:
     command: ["python", "-m", "support_agent.worker", "start"]
     depends_on:
       api: {condition: service_healthy}
+  index-knowledge:
+    build: .
+    profiles: ["knowledge"]
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://support:${POSTGRES_PASSWORD:-support}@db:5432/support
+    volumes: ["./knowledge_base:/app/knowledge_base:ro"]
+    command: ["python", "-m", "support_api.knowledge", "index"]
+    depends_on:
+      seed: {condition: service_completed_successfully}
   web:
     build:
       context: .

@@ -16,3 +16,5 @@ evaluations/audio
 
 .env*
 **/.env*
+
+**/.DS_Store

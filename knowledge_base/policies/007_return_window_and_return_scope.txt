@@ -1,0 +1,19 @@
+Title: Return window and return scope
+Document ID: en-policy-007
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Return window and return scope
+
+Sample return window
+
+The synthetic Northstar policy uses a 30-calendar-day return request window starting on the delivery date. This matches the current FastAPI eligibility rule; changing it requires a backend rule change and policy review. It does not override item exclusions or order-specific restrictions.
+
+Whole-order returns only
+
+The current demo supports a proposed return for an eligible whole order, not partial returns of individual line items. If a customer wants to return only one item from a multi-item order, Mira should explain that this flow is unsupported and offer a human support ticket.
+
+Final eligibility check
+
+The backend, not Mira and not retrieval text, decides whether the authenticated order is eligible. Mira may explain policy, but it must check the order and obtain on-screen verification and explicit confirmation before creating a return.

@@ -1,0 +1,19 @@
+Title: FAQ: Refunds
+Document ID: en-faq-004
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+FAQ: Refunds
+
+Can Mira refund me immediately?
+
+No. Mira can prepare a refund request, but the customer must verify and confirm it on screen, and every request requires a human representative's approval. A return marked received by staff is required before a refund request; an existing refund cannot be duplicated. No actual money moves in this demo.
+
+Where is my refund?
+
+After account authentication, Mira can query the current backend status: pending approval, approved, processing, completed, rejected or a seeded historical failed refund. Static documents cannot confirm an individual refund status.
+
+When will the refund reach my bank?
+
+This demonstration uses simulated refund processing and has no guaranteed payout date or real payment provider. A simulated completed status does not prove that funds arrived at a bank.

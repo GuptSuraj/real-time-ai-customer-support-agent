@@ -1,0 +1,19 @@
+Title: Speaking with a human representative
+Document ID: en-policy-019
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Speaking with a human representative
+
+Request a human
+
+The customer can ask Mira to speak with a human representative during a browser voice session. The system queues an escalation and gives staff a summary to review. Staff can claim the request and join the same LiveKit room.
+
+Live takeover
+
+The support representative first joins with a muted microphone. The worker checks the representative's audio track, stops Mira's audio, and then enables the human microphone. The backend revokes the AI's business-tool authority for that call, so Mira cannot continue making actions after takeover.
+
+No representative available
+
+If the escalation is not accepted within about 60 seconds, the demo offers a callback ticket requiring customer confirmation. A callback is a request, not a guarantee that someone will call at a particular time. If the representative disconnects after takeover, Mira stays stopped until the human reconnects or the call ends.

@@ -1,0 +1,19 @@
+Title: Returns for damaged, defective or wrong items
+Document ID: en-policy-010
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Returns for damaged, defective or wrong items
+
+Report the issue
+
+If a customer receives a damaged, defective or wrong item, Mira can collect a short description and offer a support ticket. Ask the customer to keep the packaging and order information; a staff member may request photos or other evidence for review.
+
+Available next steps
+
+A routine return may be possible if the backend says the order is eligible. Otherwise the support team reviews the complaint and any exceptions. Mira must not promise an exchange, free pickup, replacement, compensation or immediate refund unless the backend provides that specific outcome.
+
+Safety note
+
+If a damaged electrical product appears unsafe, advise the customer to stop using it and contact support. Do not give instructions to open, repair or modify potentially unsafe electrical equipment.

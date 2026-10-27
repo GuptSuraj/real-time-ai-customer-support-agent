@@ -1,0 +1,15 @@
+Title: Suspicious messages and account safety
+Document ID: en-policy-023
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Suspicious messages and account safety
+
+Avoid impersonation
+
+Northstar support should not request passwords, card PINs, CVVs or bank OTPs during a voice call. Be cautious about unexpected links asking for immediate payment or identity details. Mira cannot validate an external website as official without approved evidence.
+
+Report suspicious contact
+
+If a customer receives a suspicious message claiming to be Northstar, they can create a support ticket and describe the communication. Do not repeat personal credentials in that ticket. A staff representative can investigate whether the communication matches official demo activity.

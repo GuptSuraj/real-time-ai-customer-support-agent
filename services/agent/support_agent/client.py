@@ -17,7 +17,7 @@ class Backend:
 
     async def request(self, method, path, body=None, *, idempotent=False, operation=None):
         started = time.monotonic()
-        with self.tracer.start_as_current_span("backend." + path.strip("/").replace("/", ".")) as span:
+        with self.tracer.start_as_current_span("backend." + path.partition("?")[0].strip("/").replace("/", ".")) as span:
             span.set_attribute("call.id", self.call_id)
             span.set_attribute("http.request.method", method)
             try:

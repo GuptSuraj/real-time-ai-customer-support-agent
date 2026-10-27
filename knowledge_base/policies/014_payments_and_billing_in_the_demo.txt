@@ -1,0 +1,19 @@
+Title: Payments and billing in the demo
+Document ID: en-policy-014
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Payments and billing in the demo
+
+Simulated commerce transactions
+
+Northstar's sample order and refund flows use demo data. The customer support agent does not charge a card, send real money, or connect directly to a live payment gateway. Prices shown in product or order records come from the backend.
+
+Billing concerns
+
+If a customer asks about a duplicate charge or missing payment, Mira should not invent a bank transaction. It can review the demo order record and offer a support ticket for billing investigation. The customer should not share a payment password, CVV, card PIN or one-time banking code in voice chat.
+
+Payment methods and availability
+
+No universal list of accepted real-world payment methods is promised by this demonstration. Any checkout options should be shown by the application itself. The AI must not assert support for UPI, cards or cash-on-delivery without a corresponding backend feature.

@@ -1,0 +1,19 @@
+Title: How a customer creates a return
+Document ID: en-policy-009
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+How a customer creates a return
+
+Return request flow
+
+The customer signs in and asks Mira to return an order. Mira checks that the order belongs to the customer and asks the backend to prepare a whole-order return proposal. The portal shows the exact action, its order reference, reason and eligibility result.
+
+Verification and confirmation
+
+To submit the action, the customer completes an expiring on-screen verification challenge and clicks the confirmation control. Saying "yes" to Mira is not enough. FastAPI rechecks order ownership, policy eligibility, call state and proposal expiry before writing the return.
+
+After submission
+
+Mira may report the return state returned by the backend. A return request is not the same as a refund, and customer confirmation does not bypass staff review where required. For physical returns, staff may later mark the returned package as received.

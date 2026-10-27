@@ -1,0 +1,19 @@
+Title: Guide: Monitor display and connectivity problems
+Document ID: en-guide-003
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+Guide: Monitor display and connectivity problems
+
+No image on the monitor
+
+Check that the monitor has power and that the input source matches the connected cable. Confirm the HDMI or DisplayPort cable is seated securely, and test another supported port or cable when available. Device and resolution support vary by model.
+
+Wrong resolution or refresh rate
+
+Use the computer's display settings to choose a mode supported by the monitor, cable and computer. Do not promise a specific refresh rate unless it is listed in that product's official specifications.
+
+When to contact support
+
+For cracks, electrical faults or persistent failure, stop troubleshooting and offer a support ticket with the signed-in customer's order information. Warranty and return eligibility require product-specific verification.

@@ -1,0 +1,19 @@
+Title: FAQ: Delivery and shipping
+Document ID: en-faq-002
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+FAQ: Delivery and shipping
+
+How long does shipping take?
+
+The fictional demo policy estimates 3 to 5 business days for standard delivery. Express shipping is not implemented in the current demo. These are estimates; the backend and carrier events determine the actual order status.
+
+Can I change the delivery address?
+
+Mira cannot directly change an address. It can check the shipment state and offer a support ticket; a representative can review the request.
+
+What if tracking says delivered but I cannot find my package?
+
+Check the delivery location and whether someone else accepted it, then open a ticket if the package is still missing. Mira must not guarantee a replacement or refund without investigation.

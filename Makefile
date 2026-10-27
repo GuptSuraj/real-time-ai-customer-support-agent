@@ -20,3 +20,11 @@ types:
 	pnpm --dir apps/web generate:api
 up:
 	docker compose up --build
+
+.PHONY: knowledge-audit knowledge-index retrieval-eval
+knowledge-audit:
+	PYTHONPATH=services/api uv run python -m support_api.knowledge audit
+knowledge-index:
+	PYTHONPATH=services/api uv run python -m support_api.knowledge index
+retrieval-eval:
+	PYTHONPATH=services/api uv run python -m support_api.knowledge.evaluate --require-targets

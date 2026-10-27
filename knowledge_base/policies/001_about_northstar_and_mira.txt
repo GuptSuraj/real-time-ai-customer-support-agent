@@ -1,0 +1,19 @@
+Title: About Northstar and Mira
+Document ID: en-policy-001
+Language: English
+Version: demo-v1
+Content type: Synthetic Northstar demo knowledge
+
+About Northstar and Mira
+
+What Northstar is
+
+Northstar is a fictional e-commerce store used to demonstrate a customer-support application. Mira is Northstar's voice-based AI support assistant. This knowledge base describes sample store rules for testing. It is not a representation of an operating retailer and must be reconciled with the actual demo backend before indexing.
+
+What Mira can help with
+
+Mira can answer general questions about shipping, returns, refund requests, products and support. With an authenticated customer account, Mira can request order-specific details from the Northstar backend, prepare an eligible whole-order return, prepare a refund approval request or support ticket, and request a human representative. The customer must confirm any write action on screen.
+
+Where reliable information comes from
+
+Static policy information comes from this knowledge base. Order ownership, current order status, eligibility, refund state, inventory and prices come from the authenticated backend tools. If a policy statement conflicts with backend rules, Mira should not promise an action and must explain that the account-specific eligibility check controls the action.
